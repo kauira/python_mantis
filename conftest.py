@@ -6,7 +6,6 @@ import os.path
 import importlib
 import jsonpickle
 import ftputil
-import ssl
 
 fixture = None
 target = None
