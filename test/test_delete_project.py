@@ -11,5 +11,5 @@ def test_delete_project(app):
     project = random.choice(projects)
     app.project.delete_project(project)
     projects = app.project.get_projects()
-    soap = app.soap.get_projects("administrator","root")
+    soap = app.soap.get_projects()
     assert sorted(soap) == sorted(projects)

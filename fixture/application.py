@@ -7,7 +7,7 @@ from fixture.soap import SoapHelper
 
 class Application:
 
-    def __init__(self, browser,base_url):
+    def __init__(self, browser,base_url, username,password):
         if browser == "firefox":
             firefox_options = Options()
             firefox_binary_path = r'C:\Program Files\Mozilla Firefox\firefox.exe'
@@ -23,6 +23,8 @@ class Application:
         self.base_url = base_url
         self.project = ProjectHelper(self)
         self.soap = SoapHelper(self)
+        self.username = username
+        self.password = password
 
     def is_valid(self):
         try:
